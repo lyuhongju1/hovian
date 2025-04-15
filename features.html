@@ -136,5 +136,30 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-    </body>
+
+ <!-- Dark Mode Toggle Script -->
+    <script>
+        const toggleBtn = document.getElementById('darkModeToggle');
+        const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+        const currentTheme = localStorage.getItem("theme");
+
+        const updateThemeIcon = () => {
+            toggleBtn.textContent = document.documentElement.classList.contains("dark-mode") ? "☀️" : "🌙";
+        };
+
+        if (currentTheme === "dark" || (currentTheme === null && prefersDarkScheme.matches)) {
+            document.documentElement.classList.add("dark-mode");
+        } else {
+            document.documentElement.classList.remove("dark-mode");
+        }
+        updateThemeIcon();
+
+        toggleBtn.addEventListener("click", () => {
+            document.documentElement.classList.toggle("dark-mode");
+            const theme = document.documentElement.classList.contains("dark-mode") ? "dark" : "light";
+            localStorage.setItem("theme", theme);
+            updateThemeIcon();
+        });
+    </script>
+</body>
 </html>
