@@ -19,9 +19,36 @@
 [data-aos] {
     max-width: 100%;
 }
+        
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
+        @media (max-width: 576px) {
+  body {
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  .row, .container, .container-fluid {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  video, img {
+    max-width: 100%;
+    height: auto;
+  }
+}
 
 
 
+ .navbar,
+.navbar-collapse {
+    overflow-x: hidden;
+    max-width: 100%;
+}
 
         
         body {
