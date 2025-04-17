@@ -191,6 +191,39 @@
             </div>
         </section>
 
+
+    <section class="py-5 bg-light">
+    <div class="container px-3 px-sm-4 px-md-5">
+        <div class="row gx-5 align-items-center">
+            <!-- Text Block -->
+            <div class="col-lg-6 text-center text-lg-start" data-aos="fade-right">
+                <h2 class="fw-bolder mb-3">Your GIF. Your Mood.</h2>
+                <p class="lead fw-light mb-4">
+                    Pick from our collection of notification GIFs — or use AI to create your own.
+                    Want a calm cat, a hyped anime avatar, or your own face? Done.
+                </p>
+                <ul class="list-unstyled small">
+                    <li class="mb-2">✅ Choose from curated reactions</li>
+                    <li class="mb-2">✅ Or type a vibe and get a custom AI GIF</li>
+                    <li class="mb-2">✅ So easy even your drunk uncle could do it</li>
+                </ul>
+                <a href="#waitlist" class="btn btn-primary btn-lg mt-3">🎨 Get Early Access</a>
+            </div>
+
+            <!-- Image or Demo Block -->
+            <div class="col-lg-6 text-center" data-aos="fade-left">
+                <img src="assets/gif_maker_demo.png" class="img-fluid rounded-3 shadow-sm" alt="AI GIF Maker Demo" />
+                <!-- Optional: replace with a looping muted demo video if you have one -->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+        
+
         <section id="waitlist" class="py-5 bg-dark text-white text-center" data-aos="fade-up">
             <div class="container px-3 px-sm-4 px-md-5">
                 <h2 class="display-5 fw-bolder">Join the Waitlist</h2>
@@ -216,9 +249,10 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init({
-            duration: 800,
-            once: true
-        });
+    duration: 800,
+    once: false  // <-- 🔁 enables animations on both scroll down & up
+});
+
     </script>
 
     <!-- Dark Mode Toggle Script -->
