@@ -28,29 +28,28 @@
 
  @media (max-width: 576px) {
   html, body {
-    overflow-x: hidden !important;
-    margin: 0 !important;
-    padding: 0 !important;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
   }
 
-  .container,
-  .container-fluid,
-  .row,
-  .navbar,
-  .navbar-collapse,
-  main,
-  header,
-  section {
-    width: 100% !important;
-    overflow-x: hidden !important;
-  }
-
-  video, img {
-    max-width: 100% !important;
-    height: auto !important;
+  video,
+  img {
+    max-width: 100%;
+    height: auto;
     display: block;
   }
+
+  .video-wrapper {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  .navbar-collapse {
+    overflow-x: hidden;
+  }
 }
+
 
 
 
@@ -199,15 +198,15 @@
         <header class="py-5 pb-1 bg-light">
             <div class="container px-3 px-sm-4 px-md-5 pb-4">
                 <div class="row gx-5 align-items-center">
-                    <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-left">
-                        <div class="w-100 d-flex justify-content-center">
-  <video autoplay muted loop playsinline class="img-fluid rounded-3 border border-dark mb-3" style="max-width: 100%; height: auto;">
-    <source src="assets/Video22.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
+<div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-left">
+  <div class="video-wrapper">
+    <video autoplay muted loop playsinline class="img-fluid rounded-3 border border-dark mb-3">
+      <source src="assets/Video22.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
 </div>
 
-                    </div>
                     <div class="col-lg-6 order-2 order-lg-1 text-center text-lg-start" data-aos="fade-right">
                         <h1 class="fw-bolder mb-3 responsive-heading">
                             Control Notifications.<br><span class="text-gradient">Control Visuals.</span>
