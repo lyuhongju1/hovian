@@ -82,8 +82,7 @@
             color: #121212;
         }
 
-        .dark-mode .navbar .nav-link,
-        .dark-mode .navbar .navbar-brand {
+        .dark-mode .navbar .nav-link {
             color: #f5f5f5 !important;
         }
 
@@ -92,12 +91,22 @@
             text-decoration: underline;
         }
 
+        .dark-mode .navbar .navbar-brand span {
+            color: #66ccff !important; /* Light blue for brand */
+        }
+
         .dark-mode .text-muted {
             color: #ccc !important;
         }
 
         .dark-mode .shadow {
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.1) !important;
+        }
+
+        .dark-mode #waitlist input[type="submit"] {
+            background-color: #0d6efd !important; /* Keep primary blue */
+            color: #fff !important;
+            border: none;
         }
     </style>
 </head>
@@ -126,12 +135,10 @@
             <div class="container px-3 px-sm-4 px-md-5 pb-4">
                 <div class="row gx-5 align-items-center">
                     <div class="col-lg-6 order-1 order-lg-2 text-center">
-<video autoplay muted loop playsinline width="100%" class="img-fluid rounded-3 border border-dark mb-3">
-  <source src="assets/Video22.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
-
-
+                        <video autoplay muted loop playsinline width="100%" class="img-fluid rounded-3 border border-dark mb-3">
+                            <source src="assets/Video22.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                     <div class="col-lg-6 order-2 order-lg-1 text-center text-lg-start">
                         <h1 class="fw-bolder mb-3 responsive-heading">
