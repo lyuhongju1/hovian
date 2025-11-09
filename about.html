@@ -1,241 +1,399 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Hovian Notif.AI Features" />
-    <meta name="author" content="Hovian Inc." />
-    <title>Features - Hovian Notif.AI</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
-    <link href="css/styles.css" rel="stylesheet" />
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Hovian</title>
     <style>
-.dark-mode .navbar .navbar-brand span {
-    color: #66ccff !important; /* Light blue brand name */
-}
-
-        /* NAVBAR FIX FOR DARK MODE */
-.dark-mode .navbar {
-    background-color: #1e1e1e !important;
-    color: #f5f5f5 !important;
-    border-bottom: 1px solid #333 !important;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(6px);
-}
-
-.dark-mode .navbar .nav-link,
-.dark-mode .navbar .navbar-brand {
-    color: #f5f5f5 !important;
-}
-
-.dark-mode .navbar .nav-link:hover {
-    color: #ffffff !important;
-    text-decoration: underline;
-}
-
-.dark-mode .navbar-toggler {
-    background-color: #333 !important;
-    border-color: #777 !important;
-}
-
-.dark-mode .btn-outline-secondary {
-    color: #f5f5f5 !important;
-    border-color: #f5f5f5 !important;
-}
-
-.dark-mode .btn-outline-secondary:hover {
-    background-color: #ffffff !important;
-    color: #121212 !important;
-}
-
-
-        
-        .dark-mode body {
-            background-color: #121212;
-            color: #f5f5f5;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .dark-mode .bg-white,
-        .dark-mode .bg-light {
-            background-color: #1e1e1e !important;
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: #0a1f3d;
+            background-color: #faf9f7;
         }
 
-        .dark-mode .text-muted {
-            color: #cccccc !important;
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            background-color: #faf9f7;
         }
 
-        .dark-mode .shadow {
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.05) !important;
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #0a1f3d;
         }
 
-        .dark-mode .card,
-        .dark-mode .rounded-4 {
-            background-color: #1f1f1f !important;
-            border: 1px solid #2a2a2a !important;
+        nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
         }
 
-        .dark-mode h1,
-        .dark-mode h2,
-        .dark-mode h3,
-        .dark-mode p,
-        .dark-mode .lead {
-            color: #f5f5f5 !important;
+        nav a {
+            text-decoration: none;
+            color: #0a1f3d;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: opacity 0.3s;
         }
 
-        .dark-mode .btn-outline-secondary {
-            color: #f5f5f5;
-            border-color: #f5f5f5;
+        nav a:hover {
+            opacity: 0.7;
         }
 
-        .dark-mode .btn-outline-secondary:hover {
-            background-color: #ffffff;
-            color: #121212;
+        nav a.active {
+            font-weight: 700;
+        }
+
+        .btn-primary {
+            background-color: #0a3d5c;
+            color: white;
+            padding: 0.75rem 1.75rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #0a2d44;
+        }
+
+        .about-hero {
+            padding: 3rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            color: #0a1f3d;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-hero p {
+            font-size: 1.3rem;
+            color: #4a4a4a;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .mission-section {
+            padding: 3rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .mission-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .mission-content h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #0a1f3d;
+            margin-bottom: 1.5rem;
+        }
+
+        .mission-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #4a4a4a;
+            margin-bottom: 1.5rem;
+        }
+
+        .values-section {
+            padding: 3rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .values-section h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #0a1f3d;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .value-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .value-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .value-card h3 {
+            font-size: 1.5rem;
+            color: #0a1f3d;
+            margin-bottom: 1rem;
+        }
+
+        .value-card p {
+            color: #4a4a4a;
+            line-height: 1.6;
+        }
+
+        .stats-section {
+            padding: 3rem 5%;
+            background: linear-gradient(135deg, #0a3d5c 0%, #0a5a7c 100%);
+        }
+
+        .stats-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .cta-section {
+            padding: 3rem 5%;
+            text-align: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .cta-section h2 {
+            font-size: 3rem;
+            color: #0a1f3d;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            color: #4a4a4a;
+            margin-bottom: 1.5rem;
+        }
+
+        footer {
+            background-color: #0a1f3d;
+            color: white;
+            padding: 3rem 5% 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto 2rem;
+        }
+
+        .footer-column h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-column h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .footer-column p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+
+        .footer-column a {
+            display: block;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .footer-column a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        @media (max-width: 968px) {
+            .about-hero h1 {
+                font-size: 3rem;
+            }
+
+            .mission-content h2,
+            .values-section h2,
+            .cta-section h2 {
+                font-size: 2.5rem;
+            }
+
+            nav {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .about-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .stat-item h3 {
+                font-size: 2.5rem;
+            }
         }
     </style>
 </head>
-<body class="d-flex flex-column h-100">
-    <main class="flex-shrink-0" style="padding-top: 90px;">
-        <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 fixed-top">
-            <div class="container px-3 px-sm-4 px-md-5">
-                <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Hovian Inc.</span></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="features.html">Notif.AI Features</a></li>
-                        <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                        <li class="nav-item ms-3">
-                            <button id="darkModeToggle" class="btn btn-sm btn-outline-secondary">🌙</button>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+<body>
+    <header>
+        <div class="logo">Hovian</div>
+        <nav>
+            <a href="main.html" class="active">About</a>
+            <a href="subjects.html">Subjects</a>
+            <a href="experts.html">Experts</a>
+            <a href="contact.html">Contact</a>
+            <a href="getstarted.html" class="btn-primary">Get Started</a>
         </nav>
+    </header>
 
-        <!-- Header Section -->
-        <header class="py-5 bg-white">
-            <div class="container px-5 text-center">
-                <h1 class="display-4 fw-bolder text-gradient">Hovian Notif.AI: Where Productivity Meets Personality</h1>
-                <p class="lead text-muted mb-4">Your notifications, prioritized. Your work, uninterrupted.</p>
+    <section class="about-hero">
+        <h1>About Hovian</h1>
+        <p>We believe every student has the potential to achieve greatness. Our mission is to unlock that potential early, building the foundation for lifelong success.</p>
+    </section>
+
+    <section class="mission-section">
+        <div class="mission-content">
+            <h2>Our Mission</h2>
+            <p>At Hovian, our mission is to help students achieve their goals early. We understand that the habits, skills, and confidence built during formative years set the trajectory for future success.</p>
+            <p>We're not just about getting good grades—though that's important. We're about fostering genuine curiosity, developing critical thinking skills, and helping students discover their passions before they even know what they want to be.</p>
+            <p>Through personalized tutoring, hands-on projects, and mentorship, we empower students to take ownership of their learning journey and reach milestones they never thought possible.</p>
+        </div>
+    </section>
+
+    <section class="values-section">
+        <h2>Our Core Values</h2>
+        <div class="values-grid">
+            <div class="value-card">
+                <div class="value-icon">🎯</div>
+                <h3>Early Achievement</h3>
+                <p>We believe in helping students reach their goals sooner, giving them more time to explore, grow, and excel in what they love.</p>
             </div>
-        </header>
-
-        <!-- Features Section -->
-        <section class="py-5 bg-light">
-            <div class="container px-5">
-                <!-- Feature: Smart Prioritization -->
-                <div class="row gx-5 align-items-center mb-5">
-                    <div class="col-lg-6">
-                        <h3 class="fw-bolder">Smart Notification Prioritization with a Sense of Urgency</h3>
-                        <p class="text-muted">Notif.AI uses AI to show you only important alerts. Urgent updates come first, while less important ones wait. Stay focused while gaming, streaming, or working—no distractions.</p>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="d-flex justify-content-center">
-                            <img class="img-fluid rounded-4 shadow" src="assets/boatmonitorsm.gif" alt="Sense of Urgency GIF" style="max-width: 100%; height: auto;" />
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Feature: Pixel Avatar -->
-                <div class="row gx-5 align-items-center mb-5">
-                    <div class="col-lg-6 order-lg-2">
-                        <h3 class="fw-bolder">Pixel Avatar: Your Always-On Notification Buddy</h3>
-                        <p class="text-muted">Meet your pixel buddy. It comes when you need it, leaves when you want it out, and dances to your music. It knows what you want based on your desktop activity!</p>
-                    </div>
-                    <div class="col-lg-6 order-lg-1">
-                        <div class="d-flex justify-content-center gap-3">
-                            <img class="img-fluid rounded-4 shadow" src="assets/Untitled_Artwork.gif" alt="Pixel Avatar GIF 1" style="max-width: 48%; height: auto;" />
-                            <img class="img-fluid rounded-4 shadow" src="assets/sman.gif" alt="Pixel Avatar GIF 2" style="max-width: 48%; height: auto;" />
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Feature: Cross-Platform Integration -->
-                <div class="row gx-5 align-items-center mb-5">
-                    <div class="col-lg-6">
-                        <h3 class="fw-bolder">Seamless Cross-Platform Integration</h3>
-                        <p class="text-muted">Notif.AI centralizes notifications from tools like Slack, Gmail, Discord, and Microsoft Teams.</p>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="d-flex justify-content-center">
-                            <img class="img-fluid rounded-4 shadow" src="assets/crossplatform.gif" alt="Cross Platform GIF" style="max-width: 100%; height: auto;" />
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Feature: AI Summaries -->
-                <div class="row gx-5 align-items-center">
-                    <div class="col-lg-6 order-lg-2">
-                        <h3 class="fw-bolder">AI-Powered Summaries for Instant Clarity</h3>
-                        <p class="text-muted">Multiple important messages can also be summarized, just the way you want it!</p>
-                    </div>
-                    <div class="col-lg-6 order-lg-1">
-                        <div class="d-flex justify-content-center">
-                            <img class="img-fluid rounded-4 shadow" src="assets/summary.gif" alt="Summary GIF" style="max-width: 70%; height: auto;" />
-                        </div>
-                    </div>
-                </div>
+            <div class="value-card">
+                <div class="value-icon">💡</div>
+                <h3>Personalized Learning</h3>
+                <p>Every student is unique. We tailor our approach to match individual learning styles, interests, and aspirations.</p>
             </div>
-        </section>
-
-        <!-- Call to Action Section -->
-        <section class="py-5 bg-gradient-primary-to-secondary text-white">
-            <div class="container px-5 text-center">
-                <h2 class="display-5 fw-bolder mb-4">Take Control of Your Notifications Today</h2>
-                <p class="lead mb-4">Join our waitlist and experience Notif.AI before anyone else.</p>
-                <a class="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder" href="index.html#waitlist">Join the Waitlist</a>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-white py-4 mt-auto">
-        <div class="container px-5">
-            <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                <div class="col-auto"><div class="small m-0">Copyright &copy; Hovian Inc. 2025</div></div>
-                <div class="col-auto">
-                    <a class="small" href="#">Privacy</a>
-                    <span class="mx-1">&middot;</span>
-                    <a class="small" href="#">Terms</a>
-                    <span class="mx-1">&middot;</span>
-                    <a class="small" href="#">Contact</a>
-                </div>
+            <div class="value-card">
+                <div class="value-icon">🤝</div>
+                <h3>Mentorship</h3>
+                <p>Our tutors don't just teach—they mentor, inspire, and guide students toward becoming confident, capable individuals.</p>
             </div>
         </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stat-item">
+                <h3>0</h3>
+                <p>Students Mentored</p>
+            </div>
+            <div class="stat-item">
+                <h3>95%</h3>
+                <p>Goal Achievement Rate</p>
+            </div>
+            <div class="stat-item">
+                <h3>10+</h3>
+                <p>Expert Tutors</p>
+            </div>
+            <div class="stat-item">
+                <h3>1K+</h3>
+                <p>Hours of Tutoring</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Ready to Start Your Journey?</h2>
+        <p>Join hundreds of students who are achieving their goals early with Hovian.</p>
+        <a href="#get-started" class="btn-primary">Get Started Today</a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Hovian</h3>
+                <p>Empowering students to reach their full potential through personalized learning.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <a href="about.html">About Us</a>
+                <a href="subjects.html">Subjects</a>
+                <a href="experts.html">Our Tutors</a>
+                <a href="getstarted.html">Pricing</a>
+            </div>
+            <div class="footer-column">
+                <h4>Support</h4>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Contact Us</a>
+                <a href="#resources">Resources</a>
+                <a href="#blog">Blog</a>
+            </div>
+            <div class="footer-column">
+                <h4>Connect</h4>
+                <a href="#instagram">Instagram</a>
+                <a href="#twitter">Twitter</a>
+                <a href="#facebook">Facebook</a>
+                <a href="#linkedin">LinkedIn</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Hovian. All rights reserved.</p>
+        </div>
     </footer>
-
-    <!-- Bootstrap core JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Dark Mode Toggle Script -->
-    <script>
-        const toggleBtn = document.getElementById('darkModeToggle');
-        const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-        const currentTheme = localStorage.getItem("theme");
-
-        const updateThemeIcon = () => {
-            toggleBtn.textContent = document.documentElement.classList.contains("dark-mode") ? "☀️" : "🌙";
-        };
-
-        if (currentTheme === "dark" || (currentTheme === null && prefersDarkScheme.matches)) {
-            document.documentElement.classList.add("dark-mode");
-        } else {
-            document.documentElement.classList.remove("dark-mode");
-        }
-        updateThemeIcon();
-
-        toggleBtn.addEventListener("click", () => {
-            document.documentElement.classList.toggle("dark-mode");
-            const theme = document.documentElement.classList.contains("dark-mode") ? "dark" : "light";
-            localStorage.setItem("theme", theme);
-            updateThemeIcon();
-        });
-    </script>
 </body>
 </html>
