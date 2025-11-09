@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hovian - Learn. Grow. Succeed.</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: #0a1f3d;
+            background-color: #faf9f7;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            background-color: #faf9f7;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #0a1f3d;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #0a1f3d;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.7;
+        }
+
+        .btn-primary {
+            background-color: #0a3d5c;
+            color: white;
+            padding: 0.75rem 1.75rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #0a2d44;
+        }
+
+        .hero-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            padding: 2rem 5%;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .hero-content h1 {
+            font-size: 4.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: #0a1f3d;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #4a4a4a;
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .approach-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            padding: 3rem 5%;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .approach-content h2 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #0a1f3d;
+        }
+
+        .approach-content p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #4a4a4a;
+            margin-bottom: 2rem;
+        }
+
+        .approach-image {
+            display: flex;
+            justify-content: center;
+        }
+
+        .approach-image img {
+            width: 100%;
+            max-width: 450px;
+        }
+
+        .help-section {
+            padding: 3rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .help-section h2 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #0a1f3d;
+            margin-bottom: 2rem;
+        }
+
+        .subjects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .subject-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .subject-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .subject-card h3 {
+            font-size: 1.5rem;
+            color: #0a1f3d;
+            margin-bottom: 1rem;
+        }
+
+        .subject-card p {
+            color: #4a4a4a;
+            line-height: 1.6;
+        }
+
+        .testimonials-section {
+            padding: 3rem 5%;
+            background-color: #f0f4f8;
+        }
+
+        .testimonials-section h2 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #0a1f3d;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .testimonial-text {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #4a4a4a;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #0a3d5c;
+        }
+
+        .cta-section {
+            padding: 3rem 5%;
+            background: linear-gradient(135deg, #0a3d5c 0%, #0a5a7c 100%);
+            text-align: center;
+        }
+
+        .cta-content h2 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .cta-content p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-large {
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            background-color: white;
+            color: #0a3d5c;
+            display: inline-block;
+        }
+
+        .btn-large:hover {
+            background-color: #f0f4f8;
+            color: #0a3d5c;
+        }
+
+        footer {
+            background-color: #0a1f3d;
+            color: white;
+            padding: 3rem 5% 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto 2rem;
+        }
+
+        .footer-column h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-column h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .footer-column p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+
+        .footer-column a {
+            display: block;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .footer-column a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        @media (max-width: 968px) {
+            .hero-section,
+            .approach-section {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+
+            .approach-content h2,
+            .help-section h2 {
+                font-size: 2.5rem;
+            }
+
+            nav {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Hovian</div>
+        <nav>
+            <a href="about.html">About</a>
+            <a href="subjects.html">Subjects</a>
+            <a href="experts.html">Experts</a>
+            <a href="contact.html">Contact</a>
+            <a href="getstarted.html" class="btn-primary">Get Started</a>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Learn.<br>Grow.<br>Succeed.</h1>
+            <p>We empower students to excel in school and explore their passions. From academic tutoring to hands-on projects, we help learners strengthen their skills, think critically, and build the confidence to stand out in their future studies.</p>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1544717302-de2939b7ef71?w=800&h=1000&fit=crop" alt="Smiling student with notebook">
+        </div>
+    </section>
+
+    <section class="approach-section">
+        <div class="approach-content">
+            <h2>Our Approach</h2>
+            <p>We're here to make learning exciting and meaningful. Our tutors help students understand their schoolwork, pursue their interests, and turn their ideas into real projects— building knowledge, confidence, and curiosity along the way.</p>
+            <a href="#get-started" class="btn-primary">Get Started</a>
+        </div>
+        <div class="approach-image">
+            <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=800&h=800&fit=crop" alt="Tutor and student">
+        </div>
+    </section>
+
+    <section class="help-section">
+        <h2>We can help with</h2>
+        <div class="subjects-grid">
+            <div class="subject-card">
+                <div class="subject-icon">📚</div>
+                <h3>Academic Tutoring</h3>
+                <p>Math, Science, English, History, and more. We provide personalized support across all subjects to help students master their coursework.</p>
+            </div>
+            <div class="subject-card">
+                <div class="subject-icon">💻</div>
+                <h3>Coding & Technology</h3>
+                <p>Learn programming, web development, app creation, and computer science fundamentals with hands-on projects.</p>
+            </div>
+            <div class="subject-card">
+                <div class="subject-icon">🎨</div>
+                <h3>Creative Projects</h3>
+                <p>From writing and art to music and design, we help students explore their creative passions and develop their unique voice.</p>
+            </div>
+            <div class="subject-card">
+                <div class="subject-icon">🔬</div>
+                <h3>Science & Research</h3>
+                <p>Conduct experiments, explore scientific concepts, and develop critical thinking skills through inquiry-based learning.</p>
+            </div>
+            <div class="subject-card">
+                <div class="subject-icon">📝</div>
+                <h3>Test Preparation</h3>
+                <p>SAT, ACT, AP exams, and more. Strategic prep to boost confidence and achieve your target scores.</p>
+            </div>
+            <div class="subject-card">
+                <div class="subject-icon">🎯</div>
+                <h3>College Planning</h3>
+                <p>Navigate the college application process, craft compelling essays, and find the right fit for your future.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Ready to Get Started?</h2>
+            <p>Join hundreds of students who are achieving their goals with personalized tutoring.</p>
+            <a href="#get-started" class="btn-primary btn-large">Start Your Journey</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Hovian</h3>
+                <p>Empowering students to reach their full potential through personalized learning.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <a href="#about">About Us</a>
+                <a href="#subjects">Subjects</a>
+                <a href="#experts">Our Tutors</a>
+                <a href="#pricing">Pricing</a>
+            </div>
+            <div class="footer-column">
+                <h4>Support</h4>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Contact Us</a>
+                <a href="#resources">Resources</a>
+                <a href="#blog">Blog</a>
+            </div>
+            <div class="footer-column">
+                <h4>Connect</h4>
+                <a href="#instagram">Instagram</a>
+                <a href="#twitter">Twitter</a>
+                <a href="#facebook">Facebook</a>
+                <a href="#linkedin">LinkedIn</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Hovian. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
