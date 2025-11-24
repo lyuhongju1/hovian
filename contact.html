@@ -1,72 +1,518 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Profile of Justin Kim - CTO of Hovian Inc." />
-    <meta name="author" content="Hovian Inc." />
-    <title>Justin Kim - Profile</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
-    <link href="css/styles.css" rel="stylesheet" />
-  </head>
-  <body class="d-flex flex-column h-100 bg-light">
-    <main class="flex-shrink-0">
-      <!-- Navigation -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-        <div class="container px-5">
-          <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Hovian Inc.</span></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="features.html">Notif.AI Features</a></li>
-              <li class="nav-item"><a class="nav-link active" href="team.html">Team</a></li>
-              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Hovian</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-      <!-- Profile Section -->
-      <section class="py-5">
-        <div class="container px-5">
-          <div class="text-center mb-5">
-            <img class="img-fluid rounded-circle mb-3" src="assets/JJK.jpg" alt="Hong Joo Ryoo" style="width: 200px; height: 200px; object-fit: cover;" />
-            <h1 class="display-5 fw-bolder mb-0">Justin Kim</h1>
-            <p class="text-muted mb-4">Advisor, Co-founder of Hovian Inc.</p>
-          </div>
-          <div class="row gx-5">
-            <div class="col-lg-8 mx-auto">
-              <p class="lead fw-normal text-muted mb-4">
-  Justin Kim is the Advisor and Co-founder of Hovian Inc., where he leverages his expertise in data science and machine learning to drive cutting-edge AI innovations. 
-  He holds a Master of Science degree in Data Science from <strong>Columbia University</strong> and a Bachelor of Science degree in Statistics and Data Science from <strong>UC Santa Barbara</strong>.
-  With his role as a Machine Learning Engineer at <strong>New Atlantis Labs</strong>, Justin has been at the forefront of developing AI-driven solutions that solve real-world problems. 
-</p>
-              <div class="d-flex justify-content-center fs-4 gap-4">
-  <!-- LinkedIn -->
-                                        <a class="text-gradient" href="https://www.linkedin.com/in/justinjkim4402/" target="_blank"><i class="bi bi-linkedin"></i></a>
-                                        <!-- Email -->
-                                          <a class="text-gradient" href="mailto:jjk2266@columbia.edu" target="_blank" aria-label="Email">
-                                            <i class="bi bi-envelope-fill"></i>
-                </a>
-              </div>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: #0a1f3d;
+            background-color: #faf9f7;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            background-color: #faf9f7;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #0a1f3d;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #0a1f3d;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.7;
+        }
+
+        nav a.active {
+            font-weight: 700;
+        }
+
+        .btn-primary {
+            background-color: #0a3d5c;
+            color: white;
+            padding: 0.75rem 1.75rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #0a2d44;
+        }
+
+        .contact-hero {
+            padding: 3rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            color: #0a1f3d;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-hero p {
+            font-size: 1.3rem;
+            color: #4a4a4a;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            padding: 3rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .contact-form-section {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-form-section h2 {
+            font-size: 2rem;
+            color: #0a1f3d;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            color: #0a1f3d;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #0a3d5c;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            background-color: #0a3d5c;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background-color: #0a2d44;
+        }
+
+        .contact-info-section {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .info-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .info-card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .info-card h3 {
+            font-size: 1.3rem;
+            color: #0a1f3d;
+            margin-bottom: 0.75rem;
+        }
+
+        .info-card p {
+            color: #4a4a4a;
+            line-height: 1.6;
+        }
+
+        .info-card a {
+            color: #0a3d5c;
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.3s;
+        }
+
+        .info-card a:hover {
+            opacity: 0.7;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            display: inline-block;
+            width: 45px;
+            height: 45px;
+            background-color: #0a3d5c;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .social-link:hover {
+            background-color: #0a2d44;
+        }
+
+        .faq-section {
+            padding: 3rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .faq-section h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #0a1f3d;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .faq-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .faq-card h3 {
+            font-size: 1.2rem;
+            color: #0a1f3d;
+            margin-bottom: 1rem;
+        }
+
+        .faq-card p {
+            color: #4a4a4a;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #0a1f3d;
+            color: white;
+            padding: 3rem 5% 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto 2rem;
+        }
+
+        .footer-column h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-column h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .footer-column p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+
+        .footer-column a {
+            display: block;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .footer-column a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        @media (max-width: 968px) {
+            .contact-hero h1 {
+                font-size: 3rem;
+            }
+
+            .faq-section h2 {
+                font-size: 2.5rem;
+            }
+
+            nav {
+                gap: 1rem;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .contact-hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="main.html" style="text-decoration: none; color: inherit;">Hovian</a>
+        </div>
+        <nav>
+            <a href="about.html">About</a>
+            <a href="subjects.html">Subjects</a>
+            <a href="experts.html">Experts</a>
+            <a href="main.html" class="active">Contact</a>
+            <a href="getstarted.html" class="btn-primary">Get Started</a>
+        </nav>
+    </header>
+
+    <section class="contact-hero">
+        <h1>Get in Touch</h1>
+        <p>Have questions? We're here to help. Reach out to us and we'll get back to you as soon as possible.</p>
+    </section>
+
+    <div class="contact-container">
+        <div class="contact-form-section">
+            <h2>Send Us a Message</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number (Optional)</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Select a subject</option>
+                        <option value="tutoring">Tutoring Inquiry</option>
+                        <option value="scheduling">Scheduling</option>
+                        <option value="pricing">Pricing Information</option>
+                        <option value="general">General Question</option>
+                        <option value="apply">Apply to Teach</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+
+        <div class="contact-info-section">
+            <div class="info-card">
+                <div class="info-card-icon">📧</div>
+                <h3>Email Us</h3>
+                <p>For general inquiries and support</p>
+                <a href="mailto:hello@hovian.com">hello@hovian.com</a>
             </div>
-          </div>
+
+            <div class="info-card">
+                <div class="info-card-icon">📞</div>
+                <h3>Call Us</h3>
+                <p>Monday - Friday: 9am - 5pm PST</p>
+                <a href="tel:+15551234567">phone number</a>
+            </div>
+
+            <div class="info-card">
+                <div class="info-card-icon">📍</div>
+                <h3>Visit Us</h3>
+                <p>address<br>
+                Rancho Cucamonga, CA 91739</p>
+            </div>
+
+            <div class="info-card">
+                <div class="info-card-icon">🌐</div>
+                <h3>Follow Us</h3>
+                <p>Stay connected on social media</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">📘</a>
+                    <a href="#" class="social-link">🐦</a>
+                    <a href="#" class="social-link">📷</a>
+                    <a href="#" class="social-link">💼</a>
+                </div>
+            </div>
         </div>
-      </section>
-    </main>
-    <footer class="bg-white py-4 mt-auto">
-      <div class="container px-5">
-        <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-          <div class="col-auto"><div class="small m-0">Copyright &copy; Hovian Inc. 2025</div></div>
+    </div>
+
+    <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-grid">
+            <div class="faq-card">
+                <h3>How do I schedule a tutoring session?</h3>
+                <p>You can schedule sessions through our "Get Started" page or by contacting us directly. We'll match you with the perfect tutor based on your needs.</p>
+            </div>
+
+            <div class="faq-card">
+                <h3>What are your rates?</h3>
+                <p>Our rates vary depending on subject, tutor experience, and session type. Contact us for detailed pricing information tailored to your needs.</p>
+            </div>
+
+            <div class="faq-card">
+                <h3>Do you offer online tutoring?</h3>
+                <p>Yes! We offer both in-person and online tutoring sessions to accommodate your preferences and schedule.</p>
+            </div>
+
+            <div class="faq-card">
+                <h3>What subjects do you cover?</h3>
+                <p>We cover a wide range of subjects from core academics to specialized topics. Check our Subjects page for a complete list.</p>
+            </div>
+
+            <div class="faq-card">
+                <h3>Can I request a specific tutor?</h3>
+                <p>Absolutely! If you have a preference, let us know and we'll do our best to accommodate your request based on availability.</p>
+            </div>
+
+            <div class="faq-card">
+                <h3>What is your cancellation policy?</h3>
+                <p>We require 24-hour notice for cancellations. Sessions cancelled with less notice may be subject to a fee. Contact us for details.</p>
+            </div>
         </div>
-      </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Hovian</h3>
+                <p>Empowering students to reach their full potential through personalized learning.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <a href="about.html">About Us</a>
+                <a href="subjects.html">Subjects</a>
+                <a href="experts.html">Our Tutors</a>
+                <a href="#pricing">Pricing</a>
+            </div>
+            <div class="footer-column">
+                <h4>Support</h4>
+                <a href="#faq">FAQ</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="#resources">Resources</a>
+                <a href="#blog">Blog</a>
+            </div>
+            <div class="footer-column">
+                <h4>Connect</h4>
+                <a href="#instagram">Instagram</a>
+                <a href="#twitter">Twitter</a>
+                <a href="#facebook">Facebook</a>
+                <a href="#linkedin">LinkedIn</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Hovian. All rights reserved.</p>
+        </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/scripts.js"></script>
-  </body>
+</body>
 </html>

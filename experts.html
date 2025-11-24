@@ -1,311 +1,481 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Team - Hovian Inc.</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
-    <link href="css/styles.css" rel="stylesheet" />
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experts - Hovian</title>
     <style>
-.dark-mode .navbar .navbar-brand span {
-    color: #66ccff !important; /* Light blue brand name */
-}
-
-        .dark-mode .navbar {
-    background-color: #1e1e1e !important;
-    border-bottom: 1px solid #333 !important;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(6px);
-}
-
-.dark-mode .navbar .nav-link,
-.dark-mode .navbar .navbar-brand {
-    color: #f5f5f5 !important;
-}
-
-.dark-mode .navbar .nav-link:hover {
-    color: #ffffff !important;
-    text-decoration: underline;
-}
-
-.dark-mode .navbar-toggler {
-    background-color: #333 !important;
-    border-color: #777 !important;
-}
-
-
-        .dark-mode .card {
-    background-color: #1f1f1f !important;
-    border: 1px solid #333 !important;
-}
-
-.dark-mode .card-body {
-    background-color: transparent !important;
-    color: #f5f5f5 !important;
-}
-
-.dark-mode .card .text-muted {
-    color: #bbb !important;
-}
-
-        .dark-mode body {
-            background-color: #121212;
-            color: #f5f5f5;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .dark-mode .bg-light { background-color: #1e1e1e !important; }
-        .dark-mode .bg-white { background-color: #121212 !important; }
-        .dark-mode .text-dark { color: #f5f5f5 !important; }
-        .dark-mode input, .dark-mode .form-control {
-            background-color: #333 !important;
-            color: #fff !important;
-            border: 1px solid #555 !important;
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: #0a1f3d;
+            background-color: #faf9f7;
         }
-        .dark-mode input::placeholder { color: #aaa !important; }
-        .dark-mode .navbar, .dark-mode footer { background-color: #1a1a1a !important; }
-        .dark-mode .navbar-collapse { background-color: #1a1a1a !important; }
-        .dark-mode .navbar-toggler { background-color: #333; border-color: #777; }
-        .dark-mode .btn-outline-dark {
-            color: #ffffff;
-            border-color: #ffffff;
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            background-color: #faf9f7;
         }
-        .dark-mode .btn-outline-dark:hover {
-            background-color: #ffffff;
-            color: #121212;
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #0a1f3d;
         }
-        .dark-mode .navbar .nav-link, .dark-mode .navbar .navbar-brand {
-            color: #f5f5f5 !important;
+
+        nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
         }
-        .dark-mode .navbar .nav-link:hover {
-            color: #ffffff !important;
-            text-decoration: underline;
+
+        nav a {
+            text-decoration: none;
+            color: #0a1f3d;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: opacity 0.3s;
         }
-        .dark-mode .text-muted { color: #ccc !important; }
-        .dark-mode .shadow { box-shadow: 0 0 10px rgba(255, 255, 255, 0.1) !important; }
+
+        nav a:hover {
+            opacity: 0.7;
+        }
+
+        nav a.active {
+            font-weight: 700;
+        }
+
+        .btn-primary {
+            background-color: #0a3d5c;
+            color: white;
+            padding: 0.75rem 1.75rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #0a2d44;
+        }
+
+        .experts-hero {
+            padding: 3rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .experts-hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            color: #0a1f3d;
+            margin-bottom: 1.5rem;
+        }
+
+        .experts-hero p {
+            font-size: 1.3rem;
+            color: #4a4a4a;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .experts-section {
+            padding: 3rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .experts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+        }
+
+        .expert-card {
+            background: white;
+            padding: 0;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            overflow: hidden;
+        }
+
+        .expert-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .expert-image {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, #0a3d5c 0%, #0a5a7c 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: white;
+        }
+
+        .expert-content {
+            padding: 2rem;
+        }
+
+        .expert-name {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #0a1f3d;
+            margin-bottom: 0.5rem;
+        }
+
+        .expert-title {
+            font-size: 1.1rem;
+            color: #0a3d5c;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .expert-bio {
+            color: #4a4a4a;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .expert-specialties {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .expert-specialties h4 {
+            font-size: 1rem;
+            color: #0a1f3d;
+            margin-bottom: 0.75rem;
+        }
+
+        .specialties-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .specialty-tag {
+            background-color: #f0f4f8;
+            color: #0a3d5c;
+            padding: 0.4rem 0.9rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .stats-highlight {
+            display: flex;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0a3d5c;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: #4a4a4a;
+        }
+
+        .team-section {
+            padding: 3rem 5%;
+            background: linear-gradient(135deg, #0a3d5c 0%, #0a5a7c 100%);
+            text-align: center;
+        }
+
+        .team-section h2 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .team-section p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-light {
+            background-color: white;
+            color: #0a3d5c;
+            padding: 1rem 2.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+
+        .btn-light:hover {
+            background-color: #f0f4f8;
+        }
+
+        footer {
+            background-color: #0a1f3d;
+            color: white;
+            padding: 3rem 5% 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto 2rem;
+        }
+
+        .footer-column h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-column h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .footer-column p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+
+        .footer-column a {
+            display: block;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .footer-column a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        @media (max-width: 968px) {
+            .experts-hero h1 {
+                font-size: 3rem;
+            }
+
+            .team-section h2 {
+                font-size: 2.5rem;
+            }
+
+            nav {
+                gap: 1rem;
+            }
+
+            .experts-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .experts-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .stats-highlight {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
     </style>
 </head>
-<body class="d-flex flex-column h-100 bg-light">
-    <main class="flex-shrink-0" style="padding-top: 90px;">
-
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 fixed-top">
-            <div class="container px-5">
-                <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Hovian Inc.</span></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="features.html">Notif.AI Features</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="team.html">Team</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                        <li class="nav-item ms-3">
-                            <button id="darkModeToggle" class="btn btn-sm btn-outline-secondary">🌙</button>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+<body>
+    <header>
+        <div class="logo">
+            <a href="main.html" style="text-decoration: none; color: inherit;">Hovian</a>
+        </div>
+        <nav>
+            <a href="about.html">About</a>
+            <a href="subjects.html">Subjects</a>
+            <a href="main.html" class="active">Experts</a>
+            <a href="contact.html">Contact</a>
+            <a href="getstarted.html" class="btn-primary">Get Started</a>
         </nav>
+    </header>
 
-        <!-- Team Section -->
-        <section class="py-5">
-            <div class="container px-5 mb-5">
-                <div class="text-center mb-5">
-                    <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Meet Our Team</span></h1>
-                    <p class="lead fw-light text-muted">The brilliant minds behind Hovian Notif.AI</p>
-                </div>
-                <div class="row gx-5 justify-content-center">
-                    <!-- Team Member 1: Hong Joo Ryoo -->
-                    <div class="col-lg-5 mb-5">
-                        <div class="card shadow border-0 h-100">
-                            <div class="card-body text-center">
-                                <img class="img-fluid rounded-circle mb-3" src="assets/HongJooRyooCEO.jpg" alt="Hong Joo Ryoo" style="width: 150px; height: 150px; object-fit: cover;" />
-                                <h5 class="fw-bolder"><a href="hongjooryoo.html" class="text-gradient">Hong Joo Ryoo</a></h5>
-                                <p class="text-muted mb-3">CEO, Founder</p>
-                                <p class="text-muted">Researcher at <strong>Johns Hopkins University</strong>, <strong>LBNL</strong>, and <strong>UC Berkeley</strong>, passionate about building AI-driven tools to empower people.</p>
-                                <div class="d-flex justify-content-center fs-4 gap-4">
-                                    <a class="text-gradient" href="https://www.linkedin.com/in/hong-joo-ryoo-b911431b3/" target="_blank"><i class="bi bi-linkedin"></i></a>
-                                    <a class="text-gradient" href="https://scholar.google.com/citations?user=MaOhbfsAAAAJ&hl=en" target="_blank" aria-label="Google Scholar">
-                                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg" style="width: 24px; height: 24px;" />
-                                    </a>
-                                </div>
-                            </div>
+    <section class="experts-hero">
+        <h1>Meet Our Experts</h1>
+        <p>Our team of dedicated tutors brings expertise, passion, and a commitment to helping students achieve their full potential.</p>
+    </section>
+
+    <section class="experts-section">
+        <div class="experts-grid">
+            <div class="expert-card">
+                <div class="expert-image">👨‍🏫</div>
+                <div class="expert-content">
+                    <h2 class="expert-name">Hong Joo Ryoo</h2>
+                    <p class="expert-title">Lead Academic Tutor</p>
+                    <p class="expert-bio">Hong Joo specializes in (fill in later)</p>
+                    
+                    <div class="stats-highlight">
+                        <div class="stat-item">
+                            <div class="stat-number">200+</div>
+                            <div class="stat-label">Students Taught</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">8</div>
+                            <div class="stat-label">Years Experience</div>
                         </div>
                     </div>
 
-                    <!-- Team Member 2–6 -->
-<div class="row gx-5 justify-content-center">
-    <!-- Team Member 3: Regan Yang -->
-    <div class="col-lg-3 mb-5">
-        <div class="card shadow border-0 h-100">
-            <div class="card-body text-center">
-                <img class="img-fluid rounded-circle mb-3" src="assets/ReganYang.jpg" alt="Regan Yang" style="width: 150px; height: 150px; object-fit: cover;" />
-                <h5 class="fw-bolder">Regan Yang</h5>
-                <p class="text-muted mb-3">App Development</p>
-                <div class="d-flex justify-content-center fs-4 gap-4">
-                    <a class="text-gradient" href="https://www.linkedin.com/in/eric-jiao/" target="_blank"><i class="bi bi-linkedin"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Team Member 4: Cheng Yang -->
-    <div class="col-lg-3 mb-5">
-        <div class="card shadow border-0 h-100">
-            <div class="card-body text-center">
-                <img class="img-fluid rounded-circle mb-3" src="assets/ChengYang.jpg" alt="Cheng Yang" style="width: 150px; height: 150px; object-fit: cover;" />
-                <h5 class="fw-bolder">Cheng Yang</h5>
-                <p class="text-muted mb-3">Tech Lead</p>
-                <div class="d-flex justify-content-center fs-4 gap-4">
-                    <a class="text-gradient" href="https://www.linkedin.com/in/cheng-yang-b615341b8/" target="_blank"><i class="bi bi-linkedin"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Team Member 5: Eric Jiao -->
-    <div class="col-lg-3 mb-5">
-        <div class="card shadow border-0 h-100">
-            <div class="card-body text-center">
-                <img class="img-fluid rounded-circle mb-3" src="assets/EricJiao.jpg" alt="Eric Jiao" style="width: 150px; height: 150px; object-fit: cover;" />
-                <h5 class="fw-bolder">Eric Jiao</h5>
-                <p class="text-muted mb-3">App Development</p>
-                <div class="d-flex justify-content-center fs-4 gap-4">
-                    <a class="text-gradient" href="https://www.linkedin.com/in/regan-yang-8224951bb/" target="_blank"><i class="bi bi-linkedin"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Team Member 6: Isabella Medina -->
-    <div class="col-lg-3 mb-5">
-        <div class="card shadow border-0 h-100">
-            <div class="card-body text-center">
-                <img class="img-fluid rounded-circle mb-3" src="assets/IsabellaMedina.jpg" alt="Isabella Medina" style="width: 150px; height: 150px; object-fit: cover;" />
-                <h5 class="fw-bolder">Isabella Medina</h5>
-                <p class="text-muted mb-3">Graphic Design</p>
-                <div class="d-flex justify-content-center fs-4 gap-4">
-                    <a class="text-gradient" href="https://www.linkedin.com/in/isabellamedina1/" target="_blank"><i class="bi bi-linkedin"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Third Row: Marketing Team -->
-<div class="row gx-5 justify-content-center">
-    <!-- Team Member 7: Caleb Ro -->
-    <div class="col-lg-3 mb-5">
-        <div class="card shadow border-0 h-100">
-            <div class="card-body text-center">
-                <img class="img-fluid rounded-circle mb-3" src="assets/Caleb.jpg" alt="Caleb Ro" style="width: 150px; height: 150px; object-fit: cover;" />
-                <h5 class="fw-bolder">Caleb Ro</h5>
-                <p class="text-muted mb-3">Back End Development</p>
-                <div class="d-flex justify-content-center fs-4 gap-4">
-                    <a class="text-gradient" href="https://www.linkedin.com/in/joelsitanggang/" target="_blank"><i class="bi bi-linkedin"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Team Member 8: Qiu Qiu -->
-    <div class="col-lg-3 mb-5">
-        <div class="card shadow border-0 h-100">
-            <div class="card-body text-center">
-                <img class="img-fluid rounded-circle mb-3" src="assets/QiuQiu.jpg" alt="Qiu Qiu" style="width: 150px; height: 150px; object-fit: cover;" />
-                <h5 class="fw-bolder">Qiu Qiu</h5>
-                <p class="text-muted mb-3">Marketing</p>
-                <div class="d-flex justify-content-center fs-4 gap-4">
-                    <a class="text-gradient" href="https://www.linkedin.com/in/joelsitanggang/" target="_blank"><i class="bi bi-linkedin"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Advisory Board Section -->
-        <section class="py-5">
-            <div class="container px-5 mb-5">
-                <div class="text-center mb-5">
-                    <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">Advisory Board</span></h2>
-                    <p class="lead fw-light text-muted">Guiding Hovian’s strategic direction</p>
-                </div>
-                <div class="row gx-5 justify-content-center">
-                    <!-- Advisor: Justin Kim -->
-                    <div class="col-lg-4 mb-5">
-                        <div class="card shadow border-0 h-100">
-                            <div class="card-body text-center">
-                                <img class="img-fluid rounded-circle mb-3" src="assets/JJK.jpg" alt="Justin Kim" style="width: 150px; height: 150px; object-fit: cover;" />
-                                <h5 class="fw-bolder"><a href="justinkim.html" class="text-gradient">Justin Kim</a></h5>
-                                <p class="text-muted mb-3">Advisor, Co-founder</p>
-                                <p class="text-muted">Machine Learning Engineer at <strong>New Atlantis Labs</strong>, driving innovation through cutting-edge AI solutions.</p>
-                                <div class="d-flex justify-content-center fs-4 gap-4">
-                                    <a class="text-gradient" href="https://www.linkedin.com/in/justinjkim4402/" target="_blank"><i class="bi bi-linkedin"></i></a>
-                                    <a class="text-gradient" href="mailto:jjk2266@columbia.edu" target="_blank" aria-label="Email">
-                                        <i class="bi bi-envelope-fill"></i>
-                                    </a>
-                                </div>
-                            </div>
+                    <div class="expert-specialties">
+                        <h4>Specialties:</h4>
+                        <div class="specialties-list">
+                            <span class="specialty-tag">Calculus</span>
+                            <span class="specialty-tag">Physics</span>
+                            <span class="specialty-tag">Chemistry</span>
+                            <span class="specialty-tag">SAT Math</span>
+                            <span class="specialty-tag">AP Sciences</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- Call to action section -->
-        <section class="py-5 bg-gradient-primary-to-secondary text-white">
-            <div class="container px-5 my-5">
-                <div class="text-center">
-                    <h2 class="display-4 fw-bolder mb-4">Join us on our mission</h2>
-                    <a class="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder" href="contact.html">Contact Us</a>
+            <div class="expert-card">
+                <div class="expert-image">👨‍💻</div>
+                <div class="expert-content">
+                    <h2 class="expert-name">Eric Jiao</h2>
+                    <p class="expert-title">Technology & Coding Specialist</p>
+                    <p class="expert-bio">Eric is a (fill in later)</p>
+                    
+                    <div class="stats-highlight">
+                        <div class="stat-item">
+                            <div class="stat-number">150+</div>
+                            <div class="stat-label">Students Taught</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">6</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                    </div>
+
+                    <div class="expert-specialties">
+                        <h4>Specialties:</h4>
+                        <div class="specialties-list">
+                            <span class="specialty-tag">Python</span>
+                            <span class="specialty-tag">JavaScript</span>
+                            <span class="specialty-tag">Web Development</span>
+                            <span class="specialty-tag">App Design</span>
+                            <span class="specialty-tag">Data Science</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
-    </main>
 
-    <footer class="bg-white py-4 mt-auto">
-        <div class="container px-5">
-            <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                <div class="col-auto"><div class="small m-0">Copyright &copy; Hovian Inc. 2025</div></div>
-                <div class="col-auto">
-                    <a class="small" href="#">Privacy</a>
-                    <span class="mx-1">&middot;</span>
-                    <a class="small" href="#">Terms</a>
-                    <span class="mx-1">&middot;</span>
-                    <a class="small" href="#">Contact</a>
+            <div class="expert-card">
+                <div class="expert-image">👨‍🎓</div>
+                <div class="expert-content">
+                    <h2 class="expert-name">Cheng Yang</h2>
+                    <p class="expert-title">College Prep & Test Specialist</p>
+                    <p class="expert-bio">Cheng is a bum</p>
+                    
+                    <div class="stats-highlight">
+                        <div class="stat-item">
+                            <div class="stat-number">180+</div>
+                            <div class="stat-label">Students Taught</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">7</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                    </div>
+
+                    <div class="expert-specialties">
+                        <h4>Specialties:</h4>
+                        <div class="specialties-list">
+                            <span class="specialty-tag">SAT/ACT Prep</span>
+                            <span class="specialty-tag">College Essays</span>
+                            <span class="specialty-tag">AP Exams</span>
+                            <span class="specialty-tag">Study Skills</span>
+                            <span class="specialty-tag">College Planning</span>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="team-section">
+        <h2>Join Our Expert Team</h2>
+        <p>Are you passionate about education and helping students succeed? We're always looking for talented tutors to join our growing team.</p>
+        <a href="contact.html" class="btn-light">Apply to Teach</a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Hovian</h3>
+                <p>Empowering students to reach their full potential through personalized learning.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <a href="about.html">About Us</a>
+                <a href="subjects.html">Subjects</a>
+                <a href="experts.html">Our Tutors</a>
+                <a href="#pricing">Pricing</a>
+            </div>
+            <div class="footer-column">
+                <h4>Support</h4>
+                <a href="#faq">FAQ</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="#resources">Resources</a>
+                <a href="#blog">Blog</a>
+            </div>
+            <div class="footer-column">
+                <h4>Connect</h4>
+                <a href="#instagram">Instagram</a>
+                <a href="#twitter">Twitter</a>
+                <a href="#facebook">Facebook</a>
+                <a href="#linkedin">LinkedIn</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Hovian. All rights reserved.</p>
         </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Dark Mode Toggle Script -->
-    <script>
-        const toggleBtn = document.getElementById('darkModeToggle');
-        const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-        const currentTheme = localStorage.getItem("theme");
-
-        const updateThemeIcon = () => {
-            toggleBtn.textContent = document.documentElement.classList.contains("dark-mode") ? "☀️" : "🌙";
-        };
-
-        if (currentTheme === "dark" || (currentTheme === null && prefersDarkScheme.matches)) {
-            document.documentElement.classList.add("dark-mode");
-        } else {
-            document.documentElement.classList.remove("dark-mode");
-        }
-        updateThemeIcon();
-
-        toggleBtn.addEventListener("click", () => {
-            document.documentElement.classList.toggle("dark-mode");
-            const theme = document.documentElement.classList.contains("dark-mode") ? "dark" : "light";
-            localStorage.setItem("theme", theme);
-            updateThemeIcon();
-        });
-    </script>
 </body>
 </html>
